@@ -1,0 +1,39 @@
+{
+  "created": "2026-10-20 10:03:14",
+  "input_file": "sample_smiles.csv",
+  "n_molecules": 2,
+  "n_invalid_smiles": 0,
+  "decision_rule": "model.predict (model's own decision rule, as in the benchmark)",
+  "runtime": {
+    "python": "3.12.15",
+    "rdkit": "2025.09.3",
+    "sklearn": "1.6.1",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "joblib": "1.5.3"
+  },
+  "models": [
+    {
+      "file": "saved_models/ToxBits/toxbits_balanced_all_three/best_models/toxbits_balanced_all_three__Ensemble_Stack_RF_LGBM_SVMLinear__best_fold4.joblib",
+      "sha256": "a85b8c2c0dbe7a95b82f866b6e8f75db630879270c3820db6abe1b594575c407",
+      "model_name": "Ensemble_Stack_RF_LGBM_SVMLinear",
+      "experiment_tag": "toxbits_balanced_all_three",
+      "train_balance": "AllThree",
+      "fold": 4,
+      "n_folds": 5,
+      "selection_metric": "auc",
+      "n_features": 61,
+      "n_train": 4787,
+      "validation_auc": 0.8805980948285842,
+      "saved_at": "2026-10-20 06:52:27",
+      "trained_with": {
+        "python": "3.12.13",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "sklearn": "1.6.1",
+        "joblib": "1.5.3",
+        "lightgbm": "4.6.0"
+      }
+    }
+  ]
+}

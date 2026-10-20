@@ -1,0 +1,344 @@
+{
+  "model_name": "LightGBM_Default",
+  "role": "all_folds_model",
+  "section": "ToxBits",
+  "experiment": "ToxBits - Balanced (Polarity)",
+  "experiment_tag": "toxbits_balanced_polarity",
+  "train_balance": "Polarity",
+  "fold": 3,
+  "n_folds": 5,
+  "selection_metric": "auc",
+  "selection_rule": "best fold per model on the validation set only",
+  "n_features": 61,
+  "feature_names": [
+    "SMR_VSA5",
+    "SlogP_VSA5",
+    "Chi2n",
+    "Chi1n",
+    "PEOE_VSA6",
+    "NumRotatableBonds",
+    "MolLogP",
+    "MolMR",
+    "VSA_EState7",
+    "qed",
+    "Chi3n",
+    "Chi4n",
+    "LabuteASA",
+    "MolWt",
+    "BalabanJ",
+    "Kappa2",
+    "BCUT2D_MRLOW",
+    "Chi0n",
+    "Kappa1",
+    "Chi1",
+    "Chi0",
+    "ExactMolWt",
+    "fr_ester",
+    "Kappa3",
+    "PEOE_VSA10",
+    "FpDensityMorgan3",
+    "fr_Al_OH_noTert",
+    "fr_allylic_oxid",
+    "Chi1v",
+    "VSA_EState3",
+    "Chi0v",
+    "fr_ether",
+    "fr_Al_OH",
+    "fr_unbrch_alkane",
+    "HeavyAtomMolWt",
+    "BCUT2D_MWHI",
+    "EState_VSA5",
+    "BCUT2D_CHGHI",
+    "fr_NH0",
+    "MaxAbsEStateIndex",
+    "MaxAbsPartialCharge",
+    "MinPartialCharge",
+    "MaxPartialCharge",
+    "MinAbsPartialCharge",
+    "SlogP_VSA2",
+    "TPSA",
+    "SMR_VSA1",
+    "EState_VSA1",
+    "EState_VSA2",
+    "SMR_VSA10",
+    "BCUT2D_MRHI",
+    "BCUT2D_LOGPLOW",
+    "PEOE_VSA1",
+    "EState_VSA4",
+    "PEOE_VSA8",
+    "SlogP_VSA3",
+    "BCUT2D_MWLOW",
+    "PEOE_VSA7",
+    "BCUT2D_CHGLO",
+    "EState_VSA8",
+    "EState_VSA3"
+  ],
+  "classes": [
+    "Non Toxic",
+    "Toxic"
+  ],
+  "positive_labels": [
+    "Toxic",
+    "1",
+    "True",
+    "active",
+    "true"
+  ],
+  "n_train": 4932,
+  "n_val": 839,
+  "n_internal_test": 1443,
+  "protocol": {
+    "cv": "5-fold scaffold-grouped CV",
+    "train_val_test_fractions": "65%/15%/20%",
+    "features": "all descriptors, no collinearity filter, no confound ablation",
+    "imputation": "median fit on TRAIN only",
+    "random_state": 42,
+    "smoke_mode": false
+  },
+  "val_metrics": {
+    "accuracy": {
+      "value": 0.7544696066746126,
+      "ci_lo": 0.7234803337306317,
+      "ci_hi": 0.7830750893921334
+    },
+    "recall": {
+      "value": 0.7115384615384616,
+      "ci_lo": 0.6689946147473074,
+      "ci_hi": 0.752405024509804
+    },
+    "precision": {
+      "value": 0.774869109947644,
+      "ci_lo": 0.7326108237631864,
+      "ci_hi": 0.8202779235259395
+    },
+    "f1": {
+      "value": 0.7418546365914787,
+      "ci_lo": 0.7067564745196324,
+      "ci_hi": 0.7766996056545903
+    },
+    "sensitivity": {
+      "value": 0.7115384615384616,
+      "ci_lo": 0.6689946147473074,
+      "ci_hi": 0.752405024509804
+    },
+    "specificity": {
+      "value": 0.7966903073286052,
+      "ci_lo": 0.7580238457635717,
+      "ci_hi": 0.8364112332892275
+    },
+    "auc": {
+      "value": 0.8290228905255501,
+      "ci_lo": 0.7989750241478925,
+      "ci_hi": 0.855510674058793
+    },
+    "n": 839,
+    "n_toxic": 416
+  },
+  "internal_metrics": {
+    "accuracy": {
+      "value": 0.7907137907137907,
+      "ci_lo": 0.7692134442134443,
+      "ci_hi": 0.8101178101178101
+    },
+    "recall": {
+      "value": 0.7685076380728555,
+      "ci_lo": 0.738873486443003,
+      "ci_hi": 0.7964966911992084
+    },
+    "precision": {
+      "value": 0.8616600790513834,
+      "ci_lo": 0.8359743852677903,
+      "ci_hi": 0.8850322170597001
+    },
+    "f1": {
+      "value": 0.8124223602484472,
+      "ci_lo": 0.7905753467894924,
+      "ci_hi": 0.8327405053674058
+    },
+    "sensitivity": {
+      "value": 0.7685076380728555,
+      "ci_lo": 0.738873486443003,
+      "ci_hi": 0.7964966911992084
+    },
+    "specificity": {
+      "value": 0.8226351351351351,
+      "ci_lo": 0.7915274392216926,
+      "ci_hi": 0.852335486802802
+    },
+    "auc": {
+      "value": 0.878505414933147,
+      "ci_lo": 0.8604303467165565,
+      "ci_hi": 0.8952974426388487
+    },
+    "n": 1443,
+    "n_toxic": 851
+  },
+  "external_metrics": {
+    "AllThree": {
+      "accuracy": {
+        "value": 0.634233926128591,
+        "ci_lo": 0.6212380300957593,
+        "ci_hi": 0.6474008207934336
+      },
+      "recall": {
+        "value": 0.6183310533515732,
+        "ci_lo": 0.6007523038719109,
+        "ci_hi": 0.6369453518480077
+      },
+      "precision": {
+        "value": 0.6386435888378664,
+        "ci_lo": 0.6201627624501128,
+        "ci_hi": 0.6567718318433673
+      },
+      "f1": {
+        "value": 0.6283231972198089,
+        "ci_lo": 0.6125266987044384,
+        "ci_hi": 0.6436045392708679
+      },
+      "sensitivity": {
+        "value": 0.6183310533515732,
+        "ci_lo": 0.6007523038719109,
+        "ci_hi": 0.6369453518480077
+      },
+      "specificity": {
+        "value": 0.6501367989056087,
+        "ci_lo": 0.6325676227636607,
+        "ci_hi": 0.6678060972318133
+      },
+      "auc": {
+        "value": 0.6613853392182438,
+        "ci_lo": 0.6473333340407132,
+        "ci_hi": 0.6755412803345334
+      },
+      "n": 5848,
+      "n_toxic": 2924
+    },
+    "MolLogP": {
+      "accuracy": {
+        "value": 0.646545827633379,
+        "ci_lo": 0.6342296511627907,
+        "ci_hi": 0.6590287277701778
+      },
+      "recall": {
+        "value": 0.6173050615595075,
+        "ci_lo": 0.5984119985743782,
+        "ci_hi": 0.6350490337644782
+      },
+      "precision": {
+        "value": 0.6556483835815474,
+        "ci_lo": 0.6373247253612914,
+        "ci_hi": 0.6737988110912408
+      },
+      "f1": {
+        "value": 0.6358992425576889,
+        "ci_lo": 0.6211762667325125,
+        "ci_hi": 0.6523256201146419
+      },
+      "sensitivity": {
+        "value": 0.6173050615595075,
+        "ci_lo": 0.5984119985743782,
+        "ci_hi": 0.6350490337644782
+      },
+      "specificity": {
+        "value": 0.6757865937072504,
+        "ci_lo": 0.6593316640109265,
+        "ci_hi": 0.6929509877659559
+      },
+      "auc": {
+        "value": 0.6795554643770784,
+        "ci_lo": 0.6661559762364218,
+        "ci_hi": 0.6937106903291755
+      },
+      "n": 5848,
+      "n_toxic": 2924
+    },
+    "MolWt": {
+      "accuracy": {
+        "value": 0.6378248974008208,
+        "ci_lo": 0.625170998632011,
+        "ci_hi": 0.6506497948016415
+      },
+      "recall": {
+        "value": 0.6196990424076607,
+        "ci_lo": 0.6024920680471894,
+        "ci_hi": 0.6373893826241991
+      },
+      "precision": {
+        "value": 0.6430092264017033,
+        "ci_lo": 0.6250854064470918,
+        "ci_hi": 0.6603414881944368
+      },
+      "f1": {
+        "value": 0.6311389759665622,
+        "ci_lo": 0.6162123162735024,
+        "ci_hi": 0.6457988225559053
+      },
+      "sensitivity": {
+        "value": 0.6196990424076607,
+        "ci_lo": 0.6024920680471894,
+        "ci_hi": 0.6373893826241991
+      },
+      "specificity": {
+        "value": 0.6559507523939808,
+        "ci_lo": 0.6381865685861928,
+        "ci_hi": 0.6736884631008142
+      },
+      "auc": {
+        "value": 0.6572434763203153,
+        "ci_lo": 0.6430666455933608,
+        "ci_hi": 0.6717192827098729
+      },
+      "n": 5848,
+      "n_toxic": 2924
+    },
+    "Polarity": {
+      "accuracy": {
+        "value": 0.5047879616963065,
+        "ci_lo": 0.49247606019151846,
+        "ci_hi": 0.5169288645690835
+      },
+      "recall": {
+        "value": 0.6176470588235294,
+        "ci_lo": 0.6004791661035298,
+        "ci_hi": 0.6363046931142756
+      },
+      "precision": {
+        "value": 0.50390625,
+        "ci_lo": 0.48658028542508924,
+        "ci_hi": 0.5196183517349829
+      },
+      "f1": {
+        "value": 0.5550092194222496,
+        "ci_lo": 0.5393013100436681,
+        "ci_hi": 0.5686344214205739
+      },
+      "sensitivity": {
+        "value": 0.6176470588235294,
+        "ci_lo": 0.6004791661035298,
+        "ci_hi": 0.6363046931142756
+      },
+      "specificity": {
+        "value": 0.39192886456908343,
+        "ci_lo": 0.3753005200361609,
+        "ci_hi": 0.40855152967838926
+      },
+      "auc": {
+        "value": 0.48999909471312464,
+        "ci_lo": 0.4758807546250669,
+        "ci_hi": 0.504401012261796
+      },
+      "n": 5848,
+      "n_toxic": 2924
+    }
+  },
+  "matched_external_set": "Polarity",
+  "saved_at": "2026-10-20 07:50:05",
+  "library_versions": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "joblib": "1.5.3",
+    "lightgbm": "4.6.0"
+  }
+}
